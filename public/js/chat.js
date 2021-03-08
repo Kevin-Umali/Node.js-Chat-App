@@ -86,7 +86,6 @@ $messageForm.addEventListener('submit', (e) => {
       $messageFormInput.value = '';
       $messageFormInput.focus();
       if (err) return console.log(err);
-      console.log('The message was delivered!');
     });
   }
 });
@@ -111,7 +110,7 @@ document.querySelector('#send-location').addEventListener('click', (e) => {
         if (err) return console.log(err);
 
         $sendLocationBtn.removeAttribute('disabled');
-        console.log('Location shared!');
+        console.log(position.coords.latitude, position.coords.longitude);
       }
     );
   });
